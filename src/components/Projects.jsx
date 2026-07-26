@@ -6,7 +6,7 @@ const projects = [
   {
     title: "SwapSphere",
     description:
-      "A MERN stack barter platform that enables users to exchange items through direct and intelligent graph-based matching.",
+      "A MERN-based barter platform featuring intelligent item matching and secure exchanges.",
     image: project1,
     github: "https://github.com/Justin-Santhosh-2003",
     demo: "#",
@@ -14,7 +14,7 @@ const projects = [
   {
     title: "TextIQ",
     description:
-      "A React-based text utility application that provides text analysis, formatting, and productivity tools.",
+      "A React application offering text analysis, formatting, and productivity tools.",
     image: project2,
     github: "https://github.com/Justin-Santhosh-2003",
     demo: "#",
@@ -22,7 +22,7 @@ const projects = [
   {
     title: "Weather App",
     description:
-      "A responsive weather application that displays real-time weather information using a weather API.",
+      "A responsive weather application displaying real-time weather information using a weather API.",
     image: project3,
     github: "https://github.com/Justin-Santhosh-2003",
     demo: "#",
@@ -49,41 +49,40 @@ function Projects() {
           </p>
         </div>
 
-        {/* Project Grid */}
+        {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
 
           {projects.map((project) => (
             <div
               key={project.title}
-              className="bg-slate-900 rounded-2xl overflow-hidden border border-slate-800 shadow-lg hover:-translate-y-2 hover:border-cyan-400 transition-all duration-300"
+              className="bg-slate-900 rounded-2xl overflow-hidden border border-slate-800 shadow-lg hover:-translate-y-2 hover:border-cyan-400 transition-all duration-300 flex flex-col"
             >
-
-              {/* Image */}
+              {/* Project Image */}
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full h-52 sm:h-56 object-cover"
+                className="w-full h-56 object-cover"
               />
 
-              {/* Content */}
-              <div className="p-6 flex flex-col h-65">
+              {/* Project Content */}
+              <div className="flex flex-col grow p-6">
 
                 <h3 className="text-2xl font-semibold mb-3">
                   {project.title}
                 </h3>
 
-                <p className="text-slate-400 grow leading-7">
+                <p className="text-slate-400 leading-7 grow">
                   {project.description}
                 </p>
 
                 {/* Buttons */}
-                <div className="flex flex-col sm:flex-row gap-3 mt-6">
+                <div className="mt-6 flex flex-col sm:flex-row gap-3">
 
                   <a
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 text-center bg-cyan-500 hover:bg-cyan-400 text-slate-900 font-semibold py-2 rounded-lg transition"
+                    className="flex-1 text-center bg-cyan-500 hover:bg-cyan-400 text-slate-900 font-semibold py-3 rounded-lg transition"
                   >
                     GitHub
                   </a>
@@ -92,7 +91,7 @@ function Projects() {
                     href={project.demo}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 text-center border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 font-semibold py-2 rounded-lg transition"
+                    className="flex-1 text-center border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 font-semibold py-3 rounded-lg transition"
                   >
                     Live Demo
                   </a>
